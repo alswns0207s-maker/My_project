@@ -1,0 +1,15 @@
+VC707_ETH_DDR3_TARGETTRACKING_YOLO_INTEGRATION
+
+This package was generated from:
+- VC707_MB_OSS_ETH_BRAM_NO_UART_self_contained_260602.zip
+- TargetTracking_YOLO.zip
+
+Contents:
+- rtl/ddr3: DDR3/MIG command bridge and YOLO global feature buffer adapter
+- rtl/yolo: uploaded TargetTracking_YOLO Verilog/mem files
+- rtl/ethernet: lightweight third_party verilog-ethernet source copied from original VC707 package
+- rtl/orig_endpoint: original UDP BRAM endpoint and MDIO init module
+- rtl/top: example/snippet showing how to connect YOLO GFB signals
+- pc_tools: AirSim/image UDP MBWR sender
+- vivado: source-add Tcl
+- docs: Korean integration guide
