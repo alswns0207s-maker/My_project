@@ -1,0 +1,7 @@
+gesture_recognizer.task
+hand_detector.tflite
+hand_landmarks_detector.tflite
+gesture_embedder.tflite
+canned_gesture_classifier.tflite
+manifest.json
+custom_probes.json

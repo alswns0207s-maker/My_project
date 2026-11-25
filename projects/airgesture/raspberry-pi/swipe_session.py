@@ -7,7 +7,7 @@ def create_detector():
     # An existing swipe_mlp.npz must not silently select the previous backend.
     global _announced
     if not _announced:
-        print('[SWIPE] Palm displacement: 8% frame width (~51px at 640); OK enters / FIST exits')
+        print('[SWIPE] Palm displacement: 8% frame width (~51px at 640); OK enters / MEDIA: thumb+index+pinky exits / PPT: FIST exits')
         _announced = True
     return PalmDisplacementDetector(threshold=.08)
 
@@ -23,13 +23,16 @@ class SwipeSession:
         self.ok_since=self.release_since=self.last_time=None
         self.ready=True
         self.fist_since=None
+        self.exit_gesture='FIST'
         self.ok_debug=None
         self.ok_valid=0.0
         self.previous_ok=False
         self.last_ok=None
     @property
     def status(self):
-        if self.active:return 'SWIPE: ' + self.detector.status + ' | FIST 0.35s TO EXIT'
+        if self.active:
+            exit_hint='THUMB+INDEX+PINKY 0.4s: EXIT ONLY' if self.exit_gesture=='SWIPE_EXIT' else 'FIST 0.35s TO EXIT'
+            return 'SWIPE: ' + self.detector.status + ' | ' + exit_hint
         if self.ok_debug is not None:
             ratio=self.ok_debug.get('pinch_ratio')
             if ratio is not None:
@@ -53,10 +56,11 @@ class SwipeSession:
             self.interrupt_tracking()
             return False
         if self.active:
-            # A second OK does not toggle off. Only a continuous fist exits.
-            if gesture=='FIST':
+            # The controller selects a mode-specific exit pose.
+            if gesture==self.exit_gesture:
                 if self.fist_since is None:self.fist_since=now
-                if now-self.fist_since>=FIST_EXIT_SECONDS-1e-9:
+                hold=.4 if self.exit_gesture=='SWIPE_EXIT' else FIST_EXIT_SECONDS
+                if now-self.fist_since>=hold-1e-9:
                     self.active=False
                     self.ready=True
                     self.interrupt_tracking()

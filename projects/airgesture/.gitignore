@@ -1,0 +1,6 @@
+youtube_profile/
+playback_errors.jsonl
+swipe_data/
+audited_data/
+*.avi
+*.mp4

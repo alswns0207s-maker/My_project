@@ -94,12 +94,11 @@ def manage(action):
                         app.Presentations.Open(path, True, False, True)
                     finally:
                         app.AutomationSecurity=previous_security
-                result={'ok':True,'target':'powerpoint',
-                        'detail':'PPT 파일 열기 완료. 자동 발표 시작은 꺼져 있습니다. 발표는 F5로 시작하세요.'}
+                result=start_show(app)
                 try:
                     try:from .window_focus import focus_ppt_show, focus_ppt_editor
                     except ImportError:from window_focus import focus_ppt_show, focus_ppt_editor
-                    focused=focus_ppt_show() if app.SlideShowWindows.Count else focus_ppt_editor()
+                    focused=focus_ppt_show()
                     if not focused:raise RuntimeError('Focus denied')
                 except Exception:
                     result['detail'] += ' (Windows가 창 전환을 막으면 작업 표시줄에서 PowerPoint를 눌러 주세요.)'

@@ -1,0 +1,12 @@
+# Image generation record
+Built-in image_gen tool. Images reviewed before upload.
+
+## pointer-memory
+Create a Korean educational infographic, landscape, crisp legible typography, white background, navy teal orange, generous spacing, for beginner C STM32 notes. Title '값 복사와 포인터는 다르다'. Show two accurate panels with memory boxes and arrows, not decorative code screenshot. Left panel '값 복사': count box contains 10, saved separate box contains 10; arrow labeled '값 복사'. Caption 'count를 바꿔도 saved는 그대로'. Right panel '주소 전달': pointer p box contains 'count의 주소', arrow from p to count box containing 20. Short code labels 'int *p = &count;' and '*p = 20;'. Caption 'p의 주소값은 그대로, count의 내용만 변경'. Bottom note '선언의 *는 포인터 표시 · 표현식의 *는 역참조'. Do not depict p containing value 20. No actual hexadecimal addresses needed. Accurate professional textbook image.
+
+## fnd-scan
+Create a Korean educational infographic landscape for STM32 beginner FND notes, white background navy teal orange, high legibility. Title '4자리 FND: 빠른 표시, 느린 카운트'. Four time slots left to right, each shows a four-digit seven-segment display for number 1234; slot1 only first digit 1 illuminated, slot2 only second digit 2, slot3 only third digit 3, slot4 only fourth digit 4; other digits dim outlines. Label 'D1', 'D2', 'D3', 'D4'. Under the slots arrows show cycle repeating. Captions '한 번에 한 자리만 선택', '모든 자리 OFF → 세그먼트 변경 → 한 자리 ON'. Bottom separate timeline labeled '숫자 증가: 100 ms마다' with '1234 → 1235'. Note '자리 스캔 주기와 숫자 증가 주기는 서로 다르다'. Do not imply actual simultaneous lighting. Precise schematic infographic as generated image.
+
+## timer-interrupt
+Create a polished Korean educational infographic, landscape, white background navy teal orange. Title 'TIM3 인터럽트: 요청부터 복귀까지'. Main flow with five well-separated labeled illustrated blocks connected in order: 'TIM3 업데이트 이벤트', 'NVIC 요청 관리', 'TIM3_IRQHandler()', 'HAL_TIM_IRQHandler()', 'HAL_TIM_PeriodElapsedCallback()'. Above show a CPU main program timeline interrupted, an elevated ISR span, and return arrow back to continuation, labels '원래 코드', '인터럽트 처리', '중단한 흐름으로 복귀'. Lower left a memory stack icon labeled '실행 문맥 일부 저장·복원'; lower right two short warnings '콜백은 짧게' and 'ISR에서 HAL_Delay 피하기'. Footer '벡터 테이블은 핸들러 주소 목록 · NVIC는 우선순위 관리'. Keep exact function spellings readable; no fake code, no incorrect NVIC writes to stack arrows.
+Timer diagram edited to specify overflow after counting 0 through ARR.

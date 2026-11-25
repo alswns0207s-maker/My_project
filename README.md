@@ -9,7 +9,11 @@ RV32I SoC의 RTL과 AMBA APB 통합, VC707 FPGA와 PC 간 데이터 전송, STM3
 | [RV32I 멀티사이클 CPU와 APB SoC](projects/rv32i-apb-soc/) | Basys3, SystemVerilog, APB RAM·GPIO, XSim | 누적합 55 확인, APB 대기 상태 재현, PC+4 배치배선 비교 |
 | [VC707 FPGA YOLOv5n와 드론 추적](projects/fpga-yolov5n/) | Ethernet/UDP, FIFO, AXI4·MIG·DDR3, YOLO Verilog | BBox 데이터 경로 확인, 독립 재양자화 모듈의 경로 지연 43.4% 감소 |
 | [STM32 FreeRTOS 자율주행차](projects/stm32-autodrive/) | STM32F411RE, 초음파 입력, UART 블루투스, TIM3 PWM | 로직 애널라이저 PWM 기록과 ControlTask 주기 계측 코드 |
-| [AirGesture 손동작 제어](projects/airgesture/) | Raspberry Pi, MediaPipe, NumPy MLP, Windows PC 연결 | 6,209개 파라미터 MLP 로드·추론 확인, 미디어·PPT·마우스 제어 경로 구현 |
+| [AirGesture 손동작 제어](projects/airgesture/) | Raspberry Pi, MediaPipe, NumPy MLP, Windows PC 연결 | 최종 제출 소스와 모델 학습 코드, 기존 테스트 55개 통과 |
+
+## 학습 코드와 노트
+
+[학습 자료 모음](study/) · [FPGA·SystemVerilog](study/fpga/) · [STM32](study/stm32/) · [AirGesture 모델 학습](projects/airgesture/training/swipe/)
 
 ## 구현과 검증 환경
 

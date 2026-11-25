@@ -1,0 +1,7 @@
+numpy==1.26.4
+opencv-contrib-python==4.10.0.84
+mediapipe==0.10.18
+Flask==3.1.2
+jax==0.4.35
+jaxlib==0.4.35
+ai-edge-litert==2.1.0; sys_platform == "linux" and platform_machine == "aarch64"

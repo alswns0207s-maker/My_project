@@ -117,7 +117,7 @@ def main():
     print("Thumb closed + other 4 fingers 1.2s -> MAIN")
     print("After selecting a mode, release the selection pose for 0.35s.")
     print("MEDIA: palm 0.4s=PLAY; fist=PAUSE; volume step=10.")
-    print("SWIPE: OK sign 0.35s=exclusive; open palm and wave; OK again=exit (release pose between OK signs).")
+    print("SWIPE: OK 0.35s=enter; MEDIA thumb+index+pinky 0.4s=exit only; PPT fist 0.35s=exit; cooldown 0.8s.")
     print("[PC] Bridge enabled" if bridge else "[PC] Recognition only. Run python configure_bridge.py to connect the PC.")
     print("Q / ESC / Ctrl+C to quit.")
     try:

@@ -1,0 +1,4 @@
+# Raspberry Pi OS Bookworm / Python 3.11 aarch64.
+ai-edge-litert==2.1.0
+numpy==1.26.4
+protobuf>=4.25.3,<5
