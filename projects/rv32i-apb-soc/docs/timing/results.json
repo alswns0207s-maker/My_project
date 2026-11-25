@@ -1,0 +1,24 @@
+{
+  "single": {
+    "wns": 6.947,
+    "count": 0,
+    "period": 20,
+    "delay": 12.558,
+    "levels": 9,
+    "start": "instruction_reg[20]/C",
+    "end": "core/U_DATAPATH/U_REGISTER_FILE/register_ram_file_reg_r1_0_31_12_17/RAMC/I",
+    "estimate": 13.053
+  },
+  "multi": {
+    "wns": 6.966,
+    "count": 0,
+    "period": 20,
+    "delay": 12.601,
+    "levels": 14,
+    "start": "instruction_reg[15]_rep/C",
+    "end": "core/U_DATAPATH/U_REG_FILE/ram_file_reg[13][28]/D",
+    "estimate": 13.033999999999999
+  },
+  "periodShorterPercent": 0.14556040756915634,
+  "frequencyRatio": 1.001457725947522
+}

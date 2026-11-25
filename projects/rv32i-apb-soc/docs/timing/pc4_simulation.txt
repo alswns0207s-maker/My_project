@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Nov 23 13:46:42 2026
+# Process ID: 22068
+# Current directory: [local path]
+# Command line: xsim.exe -mode tcl -source {xsim.dir/pc4_test/xsim_script.tcl}
+# Log file: [local path]
+# Journal file: [local path]
+#-----------------------------------------------------------
+source xsim.dir/pc4_test/xsim_script.tcl
+# xsim {pc4_test} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS: 1034 directed and random cases, ripple PC+4 == restored PC+4 == expected 32-bit sum
+$finish called at time : 27936 ns : File "[local path]" Line 42
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov 23 13:46:46 2026...

@@ -1,0 +1,47 @@
+# Vivado generated outputs
+.Xil/
+xsim.dir/
+vivado_project/
+*.jou
+*.log
+*.pb
+*.wdb
+*.dcp
+*.bit
+*.ltx
+
+# STM32CubeIDE generated outputs
+.settings/
+.metadata/
+Debug/
+Release/
+*.elf
+*.hex
+*.map
+*.o
+*.su
+*.cyclo
+
+# Python local environment and generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.env
+.env.*
+figures/
+
+# PC bridge runtime data
+bridge_key.txt
+bridge_config.json
+desktop_config.json
+edge-profile/
+edge_user_data/
+hand_landmarker.task
+rtos_trace.bin
+rtos_trace.csv
+
+desktop.ini
+Thumbs.db
+xsim.ini
